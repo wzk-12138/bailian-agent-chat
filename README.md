@@ -81,7 +81,7 @@ streamlit run app.py
 
 ### 坑二：Workspace ID 是连字符，不是下划线
 
-控制台截图里显示成 `ws_p7g67cu1k304e5`，真实值是 **`ws-p7g6t7cuktk304e5`**。
+控制台截图里很容易看成 `ws_a1b2c3d4e5f6`，真实值其实是 **`ws-a1b2c3d4e5f6`**（连字符）。
 短横线和下划线在截图里几乎无法区分，`1`/`l`、`0`/`o` 同理。用错会得到：
 
 ```
@@ -155,11 +155,11 @@ Environment ID 留空时页面会自动创建一个 `streamlit-env` 并复用。
 
 ### 两个 ID 从哪儿拿
 
-- **Agent ID**：Managed Agent → 智能体 → 点进「助手」详情页复制，形如 `agent_01M3PH58YTYAXCDP8PT1P3MKSE`
-- **Workspace ID**：控制台右侧头像旁的下拉 → 业务空间详情，形如 `ws-p7g6t7cuktk304e5`
+- **Agent ID**：Managed Agent → 智能体 → 点进详情页复制，形如 `agent_01M3PH58YTYAX...`
+- **Workspace ID**：控制台右侧头像旁的下拉 → 业务空间详情，形如 `ws-a1b2c3d4e5f6`
 - **APP_ID**（走 1.0 路线时）：应用管理列表 / 应用卡片上的 ID
 
-> ⚠️ **Workspace ID 用的是「连字符」不是下划线**：`ws-p7g6t7cuktk304e5`。
+> ⚠️ **Workspace ID 用的是「连字符」不是下划线**：`ws-a1b2c3d4e5f6`。
 > 截图里的短横线极易被看成下划线，但两者完全不同 —— 用错会得到
 > `400 BadRequest.IllegalEndpoint（Workspace endpoint is invalid）`。
 
